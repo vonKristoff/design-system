@@ -1,0 +1,34 @@
+@layer utilities {
+	dialog {
+		@apply bg-twist-200;
+		@apply backdrop-blur-lg;
+		transform: translate(-50%, -50%);
+		top: 50%;
+		left: 50%;
+		opacity: 1;
+		width: 90vw;
+		height: 90dvh;
+		transition: all 0.4s allow-discrete;
+	}
+	@starting-style {
+		dialog[open] {
+			opacity: 0;
+			transform: translate(-50%, -25%);
+		}
+	}
+	dialog:not([open]) {
+		opacity: 0;
+		transform: translate(-50%, -150%);
+	}
+	dialog > .modal {
+		@apply p-12;
+		@apply gap-12;
+		@apply flex;
+		@apply flex-col;
+	}
+
+	dialog::backdrop {
+		background-color: color-mix(in srgb, var(--pop) 50%, transparent);
+		@apply backdrop-blur-md;
+	}
+}

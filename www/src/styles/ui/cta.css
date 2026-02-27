@@ -1,0 +1,75 @@
+@layer base {
+	button,
+	a {
+		cursor: pointer;
+	}
+	main a {
+		text-decoration: none;
+		transition: all 0.4s;
+		@apply border-b-2;
+		@apply border-inherit;
+		&.active {
+			@apply border-accent-200;
+		}
+		&:hover {
+			@apply text-accent-200;
+			@apply border-accent-200;
+		}
+	}
+	button {
+		@apply border-2;
+		@apply px-12;
+		@apply py-2;
+		@apply rounded-lg;
+	}
+
+	button.solid {
+		@apply border-transparent;
+		@apply bg-pop-200;
+	}
+}
+
+@layer utilities {
+	.btn-primary {
+		@apply mt-4;
+		@apply rounded-lg;
+		@apply px-4;
+		@apply py-2;
+		@apply w-full;
+		@apply max-w-xs;
+	}
+}
+@layer utilities {
+	.link,
+	a.link {
+		position: relative;
+		&:hover,
+		&:focus {
+			@apply text-accent-200;
+			&:before {
+				width: 100%;
+				left: 0em;
+				border-color: currentColor;
+			}
+		}
+		&:before {
+			@apply border;
+			@apply border-transparent;
+			transition: all 0.3s;
+			position: absolute;
+			content: '';
+			bottom: -2px;
+			left: 50%;
+			width: 0%;
+		}
+		&.disabled {
+			opacity: 0.5;
+			cursor: not-allowed;
+			pointer-events: none;
+			color: inherit;
+			&:before {
+				border-color: transparent;
+			}
+		}
+	}
+}

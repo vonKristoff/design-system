@@ -1,0 +1,49 @@
+:root {
+  /* HUE_GENERATION */
+
+  --zero: oklch(from var(--hue-1) l c h);
+  --one: oklch(from var(--hue-2) l c h);
+  --neutral: oklch(from var(--hue-3) l c h);
+  --wash: oklch(from var(--hue-4) l c h);
+  --twist: oklch(from var(--hue-7) l c h);
+  --accent: oklch(from var(--hue-5) l c h);
+  --pop: oklch(from var(--hue-6) l c h);
+
+  --white: var(--mono-0);
+  --black: var(--mono-1);
+}
+
+@theme {
+  --color-black: var(--black);
+  --color-white: var(--white);
+  --color-black-off: oklch(from var(--black) calc(l + STEP) c h);
+  --color-white-off: oklch(from var(--white) calc(l - STEP) c h);
+
+  --color-zero-100: oklch(from var(--zero) calc(l + 0.2) c h);
+  --color-zero-200: oklch(from var(--zero) l c h);
+  --color-zero-300: oklch(from var(--zero) calc(l - 0.2) c h);
+
+  --color-one-100: oklch(from var(--one) calc(l + 0.2) c h);
+  --color-one-200: oklch(from var(--one) l c h);
+  --color-one-300: oklch(from var(--one) calc(l - 0.2) c h);
+
+  --color-accent-100: oklch(from var(--accent) calc(l + 0.2) c h);
+  --color-accent-200: oklch(from var(--accent) l c h);
+  --color-accent-300: oklch(from var(--accent) calc(l - 0.2) c h);
+
+  --color-pop-100: oklch(from var(--pop) calc(l + 0.2) c h);
+  --color-pop-200: oklch(from var(--pop) l c h);
+  --color-pop-300: oklch(from var(--pop) calc(l - 0.2) c h);
+
+  --color-twist-100: oklch(from var(--twist) calc(l + 0.1) c calc(h + 250));
+  --color-twist-200: oklch(from var(--twist) l c h);
+  --color-twist-300: oklch(from var(--twist) calc(l - 0.15) c calc(h - 120));
+
+  --color-wash-100: oklch(from var(--wash) calc(l + 0.2) c h);
+  --color-wash-200: oklch(from var(--wash) l c h);
+  --color-wash-300: oklch(from var(--wash) calc(l - 0.2) c h);
+
+  --color-neutral-100: oklch(from var(--neutral) calc(l + 0.2) c h);
+  --color-neutral-200: oklch(from var(--neutral) l c h);
+  --color-neutral-300: oklch(from var(--neutral) calc(l - 0.2) c h);
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "name": "system",
+    "style": "duo",
+    "hues": [
+      "#55423d",
+      "#e78fb3",
+      "#ffc0ad",
+      "#9656a1",
+      "#eeee56",
+      "#71e0ff",
+      "#da6143"
+    ],
+    "mono": ["#fffffe", "#493f59"]
+  },
+  {
+    "name": "techsup",
+    "style": "duo",
+    "hues": [
+      "#fec7d7",
+      "#003727",
+      "#d9d4e7",
+      "#a786df",
+      "#0e172c",
+      "#fffffe",
+      "#43c2c0"
+    ],
+    "mono": ["#fffffe", "#0e172c"]
+  },
+  {
+    "name": "threejjjs",
+    "style": "duo",
+    "hues": [
+      "#232946",
+      "#eebbc3",
+      "#fffffe",
+      "#eebbc3",
+      "#bbf451",
+      "#d4d8f0",
+      "#bbeec0"
+    ],
+    "mono": ["#fffffe", "#232946"]
+  },
+  {
+    "name": "monday",
+    "style": "light",
+    "hues": ["#228b22", "#4f3866", "#97006d", "#000d8a", "#cbffcb", "#323232"],
+    "mono": ["#fffffe", "#493f59"]
+  },
+  {
+    "name": "ice",
+    "style": "light",
+    "hues": ["#fffffe", "#ffd803", "#e3f6f5", "#bae8e8", "#272343", "#e3f6f5"],
+    "mono": ["#fffffe", "#493f59"]
+  },
+  {
+    "name": "frenchfancy",
+    "style": "light",
+    "hues": ["#f2f7f5", "#faae2b", "#ffa8ba", "#fa5246", "#00473e", "#00473e"],
+    "mono": ["#fffffe", "#493f59"]
+  }
+]

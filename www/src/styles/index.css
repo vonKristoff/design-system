@@ -1,0 +1,47 @@
+@import 'tailwindcss';
+@import './root.css';
+@import './fonts.css';
+@import './base.css';
+@import './utils.css';
+@import './ui/fx.css';
+@import './ui/anim.css';
+@import './ui/grid.css';
+@import './ui/cta.css';
+
+html,
+body {
+	overflow-x: hidden;
+	max-width: 100vw;
+	width: 100%;
+}
+body {
+	@apply bg-slate-50;
+}
+
+section {
+	min-height: 50dvh;
+	@apply py-12;
+}
+section[data-bg='zero'] {
+	@apply bg-zero-200;
+	@apply text-one-200;
+}
+section[data-bg='one'] {
+	@apply bg-one-200;
+	@apply text-zero-200;
+}
+
+body:has(dialog[open]) {
+	overflow: hidden;
+}
+
+blockquote {
+	border-left: 4px solid var(--accent);
+	padding: 0 0 0 20px;
+	margin: 0px;
+	font-size: 1.333em;
+}
+hr {
+	border: none;
+	border-top: 1px solid rgb(var(--gray-light));
+}

@@ -1,0 +1,50 @@
+@layer base {
+	body {
+		text-align: left;
+		word-wrap: break-word;
+		overflow-wrap: break-word;
+		@apply text-black;
+		@apply font-secondary;
+	}
+}
+
+@layer base {
+	h1 {
+		@apply text-6xl;
+	}
+	h2 {
+		@apply text-4xl;
+	}
+	h3 {
+		@apply text-2xl;
+	}
+	h4 {
+		@apply text-xl;
+	}
+	h5 {
+		@apply text-lg;
+	}
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@apply font-primary;
+		@apply font-bold;
+		@apply mb-4;
+	}
+	p {
+		@apply mb-2;
+	}
+	p:last-child {
+		@apply mb-0;
+	}
+}
+
+@layer base {
+	footer {
+		@apply py-12;
+		@apply bg-wash-100;
+	}
+}

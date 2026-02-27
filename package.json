@@ -1,0 +1,13 @@
+{
+  "workspaces": [
+    "www",
+    "cli"
+  ],
+  "scripts": {
+    "dev:www": "bun run --filter design-system dev",
+    "dev:cli": "cd cli && bun run dev",
+    "build": "bun run --filter '*' build",
+    "build:cli": "bun run --filter @threejjjs/design-system build",
+    "sync:styles": "rsync -a --exclude='root.css' www/src/styles/ cli/styles/"
+  }
+}

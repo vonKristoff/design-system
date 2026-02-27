@@ -1,0 +1,20 @@
+@import '../styles/index.css';
+
+@layer base {
+	.hue-block {
+		@apply rounded-2xl;
+		@apply w-full;
+		@apply h-auto;
+		aspect-ratio: 1/1;
+	}
+
+	.hue-card {
+		@apply flex;
+		@apply flex-col;
+		@apply items-center;
+		@apply rounded-2xl;
+		@apply gap-4;
+		@apply px-4;
+		@apply max-w-sm;
+	}
+}

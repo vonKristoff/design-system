@@ -1,0 +1,77 @@
+/* ASIDE MENU 
+  <html>
+      <body>
+        <nav>
+        <aside class="sidemenu">
+        <main>
+        <footer>
+**/
+@utility sidemenu {
+	@apply fixed;
+	@apply max-w-md;
+	@apply w-full;
+	@apply min-h-screen;
+	@apply overflow-y-scroll;
+	@apply overflow-x-hidden;
+	@apply -z-1;
+	&::before {
+		@apply bg-slate-50;
+		@apply fixed;
+		@apply overflow-hidden;
+		@apply content-none;
+		@apply inset-0;
+		@apply -z-1;
+		@apply w-full;
+		@apply h-full;
+		transition: transform 0.2s ease-in;
+		transform: translateX(-100%);
+		@media (min-width: var(--breakpoint-md)) {
+			width: var(--breakpoint-md);
+		}
+	}
+}
+@layer components {
+	main {
+		@apply relative;
+		transition: transform 0.2s ease-in;
+		overflow-x: hidden;
+		&::after {
+			@apply absolute;
+			@apply w-full;
+			@apply h-full;
+			@apply bg-twist-100;
+			@apply inset-0;
+			@apply content-none;
+			transition: transform 0.2s ease-in;
+			transform: translateX(100%);
+		}
+	}
+	aside[data-active='true']::before {
+		transform: translateX(0%);
+	}
+	body:has(aside[data-active='true']) {
+		overflow-y: hidden;
+		footer {
+			transform: translateX(100%);
+			@media (min-width: var(--breakpoint-md)) {
+				transform: translateX(var(--breakpoint-md));
+			}
+		}
+	}
+	html:has(body aside[data-active='true']) {
+		overflow-y: hidden;
+	}
+
+	aside[data-active='true'] + main {
+		transform: translateX(100%);
+		@media (min-width: var(--breakpoint-md)) {
+			transform: translateX(var(--breakpoint-md));
+		}
+	}
+
+	aside[data-active='true'] + main::after {
+		@apply backdrop-blur-md;
+		@apply opacity-50;
+		transform: translateX(0);
+	}
+}

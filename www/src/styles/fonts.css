@@ -1,0 +1,15 @@
+:root {
+	--font-noto: 'Noto Serif', serif;
+	--font-roboto: 'Roboto', sans-serif;
+	--font-manrope: 'Manrope', sans-serif;
+	--font-overpass: 'Overpass', sans-serif;
+	--font-overpass-mono: 'Overpass Mono', sans-serif;
+}
+
+@theme {
+	--font-primary: var(--font-overpass);
+	--font-secondary: var(--font-manrope);
+	--font-mono: var(--font-overpass-mono);
+	--font-heading: var(--font-noto);
+	--font-paragraph: var(--font-roboto);
+}
