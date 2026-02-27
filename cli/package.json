@@ -1,9 +1,9 @@
 {
   "name": "@threejjjs/design-system",
-  "version": "0.2.2",
+  "version": "0.2.4",
   "private": false,
   "bin": {
-    "design-system": "./dist/index.js"
+    "design-system": "dist/index.js"
   },
   "type": "module",
   "devDependencies": {
