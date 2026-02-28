@@ -101,7 +101,7 @@ async function writeTemplate() {
 }
 async function copyStylesheets(targetPath: string) {
   const files = await Array.fromAsync(
-    new Bun.Glob("**/*").scan({ cwd: "./styles" }),
+    new Bun.Glob("**/*").scan({ cwd: "../_templates/styles" }),
   );
   console.log(files);
   for (const file of files) {
