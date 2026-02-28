@@ -39,4 +39,10 @@ When **developing**: use `bun sync:styles` to update the stylesheets to the cli 
 
 🚨 because Bun has some workspace issues, best practice pre publish is to `cd cli` and `npm version patch` followed by `bun publish`
 
-**nb.** dont forget to be logged into npm, and have a working token with 2fa bypassed in order to enable publishing.
+**nb.** dont forget to
+
+- be logged into npm
+- have a working token with 2fa bypassed
+- bun run build
+- npm version patch
+- bun publish
