@@ -100,13 +100,18 @@ async function writeTemplate() {
   }
 }
 async function copyStylesheets(targetPath: string) {
+  let targetTemplate;
+  if (isDev) {
+    targetTemplate = "./_templates/styles";
+  } else {
+    targetTemplate = new URL("../_templates/styles", import.meta.url).pathname;
+  }
   const files = await Array.fromAsync(
-    new Bun.Glob("**/*").scan({ cwd: "../_templates/styles" }),
+    new Bun.Glob("**/*").scan({ cwd: targetTemplate }),
   );
-  console.log(files);
   for (const file of files) {
-    // const source = `./_templates/styles/${file}`;
-    // await Bun.write(`./${targetPath}/${file}`, Bun.file(source));
+    const source = `${targetTemplate}/${file}`;
+    await Bun.write(`./${targetPath}/${file}`, Bun.file(source));
   }
 }
 // Hex color function
