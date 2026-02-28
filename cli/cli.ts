@@ -85,6 +85,8 @@ async function writeTemplate() {
 
     await Bun.write(`./${targetPath}/root.css`, newContent);
     console.log(`${hex("#33ff33", "✓")} created themed root.css`);
+    await copyStylesheets(targetPath);
+    console.log(`${hex("#33ff33", "✓")} updated with library stylesheets`);
   } catch (err: any) {
     if (err.name === "ExitPromptError") {
       console.log(
@@ -97,7 +99,15 @@ async function writeTemplate() {
     }
   }
 }
-
+async function copyStylesheets(targetPath: string) {
+  const files = await Array.fromAsync(
+    new Bun.Glob("**/*").scan({ cwd: "./_templates/styles" }),
+  );
+  for (const file of files) {
+    const source = `./_templates/styles/${file}`;
+    await Bun.write(`./${targetPath}/${file}`, Bun.file(source));
+  }
+}
 // Hex color function
 // console.log(hex("#FF6347", "Tomato red"));
 function hex(hexColor: string, text: string) {

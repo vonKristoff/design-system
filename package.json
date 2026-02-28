@@ -8,7 +8,7 @@
     "dev:cli": "cd cli && bun run dev",
     "build": "bun run --filter '*' build",
     "build:cli": "bun run --filter @threejjjs/design-system build",
-    "sync:styles": "rsync -a --exclude='root.css' www/src/styles/ cli/dist/styles/",
+    "sync:styles": "rsync -a --exclude='root.css' www/src/styles/ cli/_templates/styles/",
     "prepublish:bump": "cd cli && npm version patch",
     "publish:cli": "cd cli && bun publish"
   }

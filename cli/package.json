@@ -20,7 +20,7 @@
     "typescript": "^5"
   },
   "scripts": {
-    "dev": "bun ./cli.ts",
+    "dev": "bun ./cli.ts --dev",
     "update:css": "cp -r ../frontend/src/styles ./dist && rm ./dist/styles/root.css",
     "build": "bun build ./cli.ts --target=bun --outfile dist/index.js --minify"
   },
