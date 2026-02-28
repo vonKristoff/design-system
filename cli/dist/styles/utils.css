@@ -1,0 +1,26 @@
+@utility inlinelink--light {
+	color: oklch(from currentColor calc(l + 0.2) c h);
+}
+@utility inlinelink--dark {
+	color: oklch(from currentColor calc(l - 0.2) c h);
+}
+@utility inlinelink {
+	@apply underline;
+	&:hover {
+		@apply text-pop-200;
+	}
+}
+@utility highlight {
+	@apply bg-accent-200;
+}
+@utility backlight {
+	@apply bg-black;
+	@apply rounded-sm;
+	@apply py-0.5;
+	@apply px-1;
+}
+@utility hero {
+	@apply grid;
+	@apply h-full;
+	@apply place-content-center;
+}

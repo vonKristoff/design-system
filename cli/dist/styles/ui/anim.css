@@ -1,0 +1,10 @@
+[data-effect] {
+	overflow: hidden;
+	transition: all 0.2s ease-out;
+}
+[data-effect='example'] {
+	transform: translateX(-100%);
+}
+[data-effect='example'].active {
+	transform: translateX(0%);
+}

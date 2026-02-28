@@ -1,0 +1,22 @@
+@layer utilities {
+	.content-grid {
+		display: grid;
+		grid-template-columns:
+			[full-start] 1fr [wide-start] 1fr [breakout-start] 1fr
+			[content-start] minmax(0, 65ch) [content-end]
+			1fr [breakout-end] 1fr [wide-end] 1fr [full-end];
+	}
+	.content-grid > * {
+		grid-column: content;
+	}
+	.content-grid > .breakout {
+		grid-column: breakout;
+		@apply px-8;
+	}
+	.content-grid > .wide {
+		grid-column: wide;
+	}
+	.content-grid > .full-width {
+		grid-column: full;
+	}
+}
