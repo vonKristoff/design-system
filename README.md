@@ -1,5 +1,15 @@
 # threejjjs Design System
 
+CSS Design system built to be used alongside Tailwind.
+
+A layer tier is the core concept: Base, Mid and Top, with vaiants which provide colour ambience to convey design pattern.
+
+| Base | Mid     | Top    |
+| ---- | ------- | ------ |
+| Zero | Neutral | Accent |
+|      | Wash    |        |
+| One  | Twist   | Pop    |
+
 This is a monorepo, with two core packages: `www` and `cli`
 
 - FE base app to develop guide UI and CSS layouts
