@@ -1,6 +1,6 @@
 {
   "name": "@threejjjs/design-system",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "private": false,
   "bin": {
     "design-system": "dist/index.js"
