@@ -11,5 +11,6 @@
     "sync:styles": "rsync -a --exclude='root.css' www/src/styles/ cli/_templates/styles/",
     "prepublish:bump": "cd cli && npm version patch",
     "publish:cli": "cd cli && bun publish"
-  }
+  },
+  "version": "0.0.1"
 }
