@@ -101,11 +101,12 @@ async function writeTemplate() {
 }
 async function copyStylesheets(targetPath: string) {
   const files = await Array.fromAsync(
-    new Bun.Glob("**/*").scan({ cwd: "./_templates/styles" }),
+    new Bun.Glob("**/*").scan({ cwd: "./styles" }),
   );
+  console.log(files);
   for (const file of files) {
-    const source = `./_templates/styles/${file}`;
-    await Bun.write(`./${targetPath}/${file}`, Bun.file(source));
+    // const source = `./_templates/styles/${file}`;
+    // await Bun.write(`./${targetPath}/${file}`, Bun.file(source));
   }
 }
 // Hex color function
